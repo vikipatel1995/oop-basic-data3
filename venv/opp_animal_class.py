@@ -6,10 +6,14 @@ class Animal():
 #Classes hold method (methods: are function which depend on...
 # ...instance of classes they can only be called on instances of a class)
 
-    def __init__(self):  #constructor method runs whenever an instance is created
-        self.name = 'Ringo' #property of the animals
+    def __init__(self, name, age):  #constructor method runs whenever an instance is created
+        #self.name = 'Ringo' #property of the animals
+        self.name = name
         self.species = 'Lizard'
-        self.age = 7
+        #self.age = 7
+        self.age = age
+        self.alive = True
+        self.number_animal_eaten = 0
 
     #method of class objects - instances
     def sleep(self):    # self refers to the instances if get classed upon - self
@@ -17,20 +21,21 @@ class Animal():
         return "zzzz"
 
     def eat(self, food):
+        self.number_animal_eaten += 1
         return 'nom nom nom this was some good ' + food
 
     def potty(self):
         return "uuhhhh"
 
-animal_1 = Animal() #creating one instance of CLass Animal
-# print(animal_1)
-# print(type(animal_1))
-
-#Calling method on instance of animal
-print(animal_1.sleep())
-print(animal_1.eat('meat salad'))
-print(animal_1.potty())
-
-#Calling method on instances if animals
-print("Animal Name:", animal_1.name , "Age:", animal_1.age)
-print(animal_1.age)
+# animal_1 = Animal() #creating one instance of CLass Animal
+# # print(animal_1)
+# # print(type(animal_1))
+# 
+# #Calling method on instance of animal
+# print(animal_1.sleep())
+# print(animal_1.eat('meat salad'))
+# print(animal_1.potty())
+# 
+# #Calling method on instances if animals
+# print("Animal Name:", animal_1.name , "Age:", animal_1.age)
+# print(animal_1.age)
